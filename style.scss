@@ -1,5 +1,18 @@
-body {
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
+
+body {
+    background: linear-gradient(to right, #334, pink);
+    font-family: sans-serif;
+    font-weight: 600;
+}
+
+.container {
+    width: 300px;
+    background-color: #ff99;
+    display: block;
+}
+
