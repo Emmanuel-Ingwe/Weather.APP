@@ -7,12 +7,50 @@
 body {
     background: linear-gradient(to right, #334, pink);
     font-family: sans-serif;
-    font-weight: 600;
+    font-weight: 550;
 }
 
 .container {
     width: 300px;
-    background-color: #ff99;
+    background-color: rgba(253, 253, 226, 0.6);
     display: block;
+    margin: 0 auto;
+    margin-top: 100px;
+    border-radius: 10px;
+    padding-bottom: 50px; line-height: 40px;
+
+    .app-title {
+        width: 300px;
+        height: 50px;
+        border-radius: 10px 10px 0 0;
+        border: 1px solid rgb(216, 255, 255);
+        text-align: center;
+    }
+    .weather-container {
+        text-align: center;
+
+        .temperature-value {
+            
+            span {
+                color: red;
+            }
+            p {
+                border-radius: 50%;
+                width: 30%;
+                background: rgb(192, 248, 248);
+                margin: 0 auto;
+            }
+        }
+        .location {
+            p {
+                border-radius: 30%;
+                 width: 50%;
+                background: rgb(100, 241, 72);
+                 margin: 0 auto;
+                 background: linear-gradient(to left, rgb(100, 241, 72), pink 50%);
+            }
+        }
+    }
 }
+
 
