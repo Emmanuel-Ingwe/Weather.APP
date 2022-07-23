@@ -7,9 +7,19 @@
 //         console.log(google.next);
 //     });
 
-const weatherIcon = document.querySelector('.weather-icon');
-const tempDescription = document.querySelector('.temperature-description');
-const tempValue = document.querySelector('.temperature-value');
-const location = document.querySelector('.location');
+const iconElement = document.querySelector('.weather-icon');
+const DescElement = document.querySelector('.temperature-description');
+const tempElement = document.querySelector('.temperature-value p');
+const locationElement = document.querySelector('.location p');
+const notificationElement = document.querySelector('.notification');
+
+// APP DATA
+const weather = {};
+weather.temperature = {
+    unit: 'celcius'
+};
 
 
+const KELVIN = 273;
+
+const key =; 
