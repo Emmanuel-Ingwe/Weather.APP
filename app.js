@@ -22,4 +22,11 @@ weather.temperature = {
 
 const KELVIN = 273;
 
-const key =; 
+const key =;
+
+if ('geolocation' in navigator) {
+    navigator.geolocation.getCurrentPosition(setPosition, showError);
+} else {
+    notificationElement.style.display = 'block';
+    notificationElement.innerHTML = "<p> Doesn't support Maps</p>";
+}
