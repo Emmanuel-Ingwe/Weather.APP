@@ -69,3 +69,22 @@ function displayWeather() {
     DescElement.innerHTML = `${weather.description}`;
     locationElement.innerHTML = `${weather.city}, ${weather.country}`;
 }
+
+
+// Initialize and add the map
+function initMap() {
+    // The location of Uluru
+    const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 4,
+        center: uluru,
+
+    });
+    // The marker, positioned at Uluru
+    const marker = new google.maps.Marker({
+        position: uluru,
+        map: map,
+    });
+    setPosition();
+}
+
+window.initMap = initMap;
