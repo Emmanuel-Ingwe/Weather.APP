@@ -8,13 +8,14 @@
 //     });
 
 const iconElement = document.querySelector('.weather-icon');
-const DescElement = document.querySelector('.temperature-description');
+const descElement = document.querySelector('.temperature-description');
 const tempElement = document.querySelector('.temperature-value p');
 const locationElement = document.querySelector('.location p');
 const notificationElement = document.querySelector('.notification');
 
 // APP DATA
-const weather = {};
+const weather = {
+};
 weather.temperature = {
     unit: 'celcius'
 };
@@ -28,7 +29,7 @@ if ('geolocation' in navigator) {
     navigator.geolocation.getCurrentPosition(setPosition, showError);
 } else {
     notificationElement.style.display = 'block';
-    notificationElement.innerHTML = `<p> Doesn't support Maps</p>`;
+    notificationElement.innerHTML = "<p> Doesn't support Maps</p>";
 }
 
 function setPosition(position) {
@@ -45,7 +46,7 @@ function showError(error) {
 }
 
 function getWeather(latitude, longitude) {
-    let api = `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${key}`;
+    let api = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${key}&units=metric`;
 
     fetch(api).then(function (response) {
         let data = response.json();
@@ -64,27 +65,27 @@ function getWeather(latitude, longitude) {
 }
 
 function displayWeather() {
-    iconElement.innerHTML = `<img src="icons/${weather.iconId}.png"/`;
+    iconElement.innerHTML = `<img src="icons/${weather.iconId}.png"/>`;
     tempElement.innerHTML = `${weather.temperature.value}* <span>C</span>`;
-    DescElement.innerHTML = `${weather.description}`;
+    descElement.innerHTML = weather.description;
     locationElement.innerHTML = `${weather.city}, ${weather.country}`;
 }
 
-const uluru = { latitude, longitude };
+// const uluru = { latitude, longitude };
 
-// Initialize and add the map
-function initMap() {
-    // The location of Uluru
-    const map = new google.maps.Map(document.getElementById("map"), {
-        zoom: 4,
-        center: uluru,
+// // Initialize and add the map
+// function initMap() {
+//     // The location of Uluru
+//     const map = new google.maps.Map(document.getElementById("map"), {
+//         zoom: 4,
+//         center: uluru,
 
-    });
-    // The marker, positioned at Uluru
-    const marker = new google.maps.Marker({
-        latitude, longitude
-    });
-    setPosition();
-}
+//     });
+//     // The marker, positioned at Uluru
+//     const marker = new google.maps.Marker({
+//         latitude, longitude
+//     });
+//     setPosition();
+// }
 
-window.initMap = initMap;
+// window.initMap = initMap;
