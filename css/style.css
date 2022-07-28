@@ -54,3 +54,8 @@ body {
   background: -webkit-gradient(linear, right top, left top, from(#64f148), color-stop(50%, pink));
   background: linear-gradient(to left, #64f148, pink 50%);
 }
+
+#map {
+  width: 90px;
+  height: 380px;
+}
