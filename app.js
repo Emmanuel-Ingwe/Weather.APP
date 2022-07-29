@@ -71,24 +71,7 @@ function displayWeather() {
     locationElement.innerHTML = `${weather.city}, ${weather.country}`;
 }
 
-// const uluru = { latitude, longitude };
 
-// // Initialize and add the map
-// function initMap() {
-//     // The location of Uluru
-//     const map = new google.maps.Map(document.getElementById("map"), {
-//         zoom: 4,
-//         center: uluru,
-
-//     });
-//     // The marker, positioned at Uluru
-//     const marker = new google.maps.Marker({
-//         latitude, longitude
-//     });
-//     setPosition();
-// }
-
-// window.initMap = initMap;
 
 // 0807 502 9111
 // +234 704 220 8363
