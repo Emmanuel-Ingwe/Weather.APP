@@ -23,7 +23,7 @@ weather.temperature = {
 
 const KELVIN = 273;
 
-const key = 'AIzaSyCw4O1bJPEFlEHln2pjPvo41mEBGj0biQA';
+const key = 'aaf17c644495a07bb97f1f4516133ec0';
 
 if ('geolocation' in navigator) {
     navigator.geolocation.getCurrentPosition(setPosition, showError);
@@ -56,7 +56,7 @@ function getWeather(latitude, longitude) {
             weather.temperature.value = Math.floor(data.main.temp - KELVIN);
             weather.description = data.weather[0].description;
             weather.iconId = data.weather[0].icon;
-            weather.city = data.name;
+            weather.city = data.timezone;
             weather.country = data.sys.country;
         })
         .then(function () {
@@ -66,7 +66,7 @@ function getWeather(latitude, longitude) {
 
 function displayWeather() {
     iconElement.innerHTML = `<img src="icons/${weather.iconId}.png"/>`;
-    tempElement.innerHTML = `${weather.temperature.value}* <span>C</span>`;
+    tempElement.innerHTML = `${weather.temperature.value}<sup>o</sup> <span>C</span>`;
     descElement.innerHTML = weather.description;
     locationElement.innerHTML = `${weather.city}, ${weather.country}`;
 }
@@ -89,3 +89,6 @@ function displayWeather() {
 // }
 
 // window.initMap = initMap;
+
+// 0807 502 9111
+// +234 704 220 8363
