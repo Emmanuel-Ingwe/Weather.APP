@@ -74,10 +74,26 @@ function displayWeather() {
 }
 
 function initMap() {
-    var options = {
+    const options = {
         zoom: 8,
         center: `{ lat: ${latitude}, lng: ${longitude} }`
     };
+
+    const map = new google.maps.Map(document.getElementById('map'), options);
+
+    // ADD MARkER
+    const marker = new google.maps.Marker({
+        position: `{ lat: ${latitude}, lng: ${longitude} }`,
+        map: map
+    });
+
+    const infoWindow = new google.maps.InfoWindow({
+        content: '<h1>Calabar NG</h1>'
+    });
+
+    marker.addListener('click', function () {
+        infoWindow.open(map, marker);
+    });
 }
 
 
