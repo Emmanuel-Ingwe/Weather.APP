@@ -16,7 +16,7 @@ body {
   width: 300px;
   background-color: rgba(253, 253, 226, 0.6);
   display: block;
-  margin: 0 auto;
+  margin: 20px auto;
   margin-top: 100px;
   border-radius: 10px;
   padding-bottom: 50px;
@@ -31,6 +31,10 @@ body {
   border-radius: 10px 10px 0 0;
   border: 1px solid #d8ffff;
   text-align: center;
+}
+
+.container .app-title p:hover {
+  text-shadow: 2px 2px 2px red;
 }
 
 .container .weather-container {
