@@ -75,7 +75,7 @@ function displayWeather() {
 function initMap() {
     const options = {
         zoom: 8,
-        center: { lat: 42.3601, lon: -71.0589 }
+        center: { lat: 42.3601, lng: -71.0589 }
     };
 
     const map = new google.maps.Map(document.getElementById('map'), options);
@@ -98,8 +98,6 @@ function initMap() {
         infoWindow.open(map, marker);
     });
 }
-
-
 
 // 0807 502 9111
 // +234 704 220 8363;
