@@ -33,6 +33,12 @@ body {
   text-align: center;
 }
 
+.container .app-title p {
+  font-size: larger;
+  color: #e3f2ff;
+  font-family: 'Courier New', Courier, monospace;
+}
+
 .container .app-title p:hover {
   text-shadow: 2px 2px 2px red;
 }
