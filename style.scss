@@ -10,6 +10,13 @@ body {
     font-weight: 550;
 }
 
+#map {
+    width: 100%;
+    height: 384px;
+    align-items: center;
+    justify-content: center;
+}
+
 .container {
     width: 300px;
     background-color: rgba(253, 253, 226, 0.6);
@@ -64,8 +71,4 @@ body {
     }
 }
 
-#map {
-    width: 90px;
-    height: 380px;
-}
 

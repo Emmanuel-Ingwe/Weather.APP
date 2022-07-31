@@ -20,8 +20,7 @@ weather.temperature = {
     unit: 'celcius'
 };
 
-const latitude = position.coords.latitude.toFixed(5);
-const longitude = position.coords.longitude.toFixed(5);
+
 
 const KELVIN = 273;
 
@@ -35,8 +34,8 @@ if ('geolocation' in navigator) {
 }
 
 function setPosition(position) {
-    let latitude = position.coords.latitude.toFixed(5);
-    let longitude = position.coords.longitude.toFixed(5);
+    let latitude = position.coords.latitude;
+    let longitude = position.coords.longitude;
 
     getWeather(latitude, longitude);
 }
@@ -73,34 +72,9 @@ function displayWeather() {
     locationElement.innerHTML = `${weather.city}, ${weather.country}`;
 }
 
-function initMap() {
-    const options = {
-        zoom: 8,
-        center: `{ lat: ${latitude}, lng: ${longitude} }`
-    };
 
-    const map = new google.maps.Map(document.getElementById('map'), options);
-
-    // google.maps.event.addListener('map', 'click', function (event) {
-    //     addMarker({});
-    // });
-
-    // ADD MARkER
-    const marker = new google.maps.Marker({
-        position: `{ lat: ${latitude}, lng: ${longitude} }`,
-        map: map
-    });
-
-    const infoWindow = new google.maps.InfoWindow({
-        content: '<h1>Calabar NG</h1>'
-    });
-
-    marker.addListener('click', function () {
-        infoWindow.open(map, marker);
-    });
-}
 
 
 
 // 0807 502 9111
-// +234 704 220 8363
+// +234 704 220 8363;
