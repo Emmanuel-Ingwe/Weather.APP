@@ -20,6 +20,8 @@ weather.temperature = {
     unit: 'celcius'
 };
 
+const latitude = position.coords.latitude.toFixed(5);
+const longitude = position.coords.longitude.toFixed(5);
 
 const KELVIN = 273;
 
@@ -69,6 +71,13 @@ function displayWeather() {
     tempElement.innerHTML = `${weather.temperature.value}<sup>o</sup><span>C</span>`;
     descElement.innerHTML = weather.description;
     locationElement.innerHTML = `${weather.city}, ${weather.country}`;
+}
+
+function initMap() {
+    var options = {
+        zoom: 8,
+        center: `{ lat: ${latitude}, lng: ${longitude} }`
+    };
 }
 
 
