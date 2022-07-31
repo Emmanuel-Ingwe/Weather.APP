@@ -81,6 +81,10 @@ function initMap() {
 
     const map = new google.maps.Map(document.getElementById('map'), options);
 
+    // google.maps.event.addListener('map', 'click', function (event) {
+    //     addMarker({});
+    // });
+
     // ADD MARkER
     const marker = new google.maps.Marker({
         position: `{ lat: ${latitude}, lng: ${longitude} }`,
