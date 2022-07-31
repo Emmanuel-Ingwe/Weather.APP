@@ -32,32 +32,6 @@
     </div>
 
     <script>
-        function initMap() {
-                const options = {
-                    zoom: 8,
-                    center: { lat: 42.3601, lon: -71.0589 }
-                };
-
-                const map = new google.maps.Map(document.getElementById('map'), options);
-
-                // google.maps.event.addListener('map', 'click', function (event) {
-                //     addMarker({});
-                // });
-
-                // ADD MARkER
-                const marker = new google.maps.Marker({
-                    position: { lat: 42.4668, lon: -70.9495 },
-                    map: map
-                });
-
-                const infoWindow = new google.maps.InfoWindow({
-                    content: '<h1>Calabar NG</h1>'
-                });
-
-                marker.addListener('click', function () {
-                    infoWindow.open(map, marker);
-                });
-            }
     </script>
 
     <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCw4O1bJPEFlEHln2pjPvo41mEBGj0biQA&callback=initMap"></script>
