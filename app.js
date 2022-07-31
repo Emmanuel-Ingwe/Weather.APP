@@ -33,8 +33,8 @@ if ('geolocation' in navigator) {
 }
 
 function setPosition(position) {
-    let latitude = position.coords.latitude;
-    let longitude = position.coords.longitude;
+    let latitude = position.coords.latitude.toFixed(5);
+    let longitude = position.coords.longitude.toFixed(5);
 
     getWeather(latitude, longitude);
 }
@@ -56,7 +56,7 @@ function getWeather(latitude, longitude) {
             weather.temperature.value = Math.floor(data.main.temp - KELVIN);
             weather.description = data.weather[0].description;
             weather.iconId = data.weather[0].icon;
-            weather.city = data.timezone;
+            weather.city = data.name;
             weather.country = data.sys.country;
         })
         .then(function () {
