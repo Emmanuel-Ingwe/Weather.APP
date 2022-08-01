@@ -96,7 +96,7 @@ function initMap() {
     });
 
     const infoWindow = new google.maps.InfoWindow({
-        content: '<h1>Calabar NG</h1>'
+        content: '<h1>Na here you dey stay</h1>'
     });
 
     marker.addListener('click', function () {
