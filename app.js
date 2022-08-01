@@ -72,10 +72,15 @@ function displayWeather() {
     locationElement.innerHTML = `${weather.city}, ${weather.country}`;
 }
 
+const latitudee = position.coords.latitude;
+const longitudee = position.coords.longitude;
+
 function initMap() {
+
+
     const options = {
         zoom: 8,
-        center: { lat: 42.3601, lng: -71.0589 }
+        center: { lat: 4.9757, lng: 8.3417 }
     };
 
     const map = new google.maps.Map(document.getElementById('map'), options);
@@ -86,7 +91,7 @@ function initMap() {
 
     // ADD MARkER
     const marker = new google.maps.Marker({
-        position: { lat: 42.4668, lon: -70.9495 },
+        position: { lat: 4.9757, lng: 8.3417 },
         map: map
     });
 
