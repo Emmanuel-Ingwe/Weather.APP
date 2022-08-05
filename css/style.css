@@ -81,19 +81,34 @@ body {
 }
 
 @media screen and (max-width: 600px) {
+  #map {
+    width: 100%;
+    height: 550px;
+  }
   .container {
     width: 150px;
     display: block;
     margin-top: 10px;
     padding-bottom: 50px;
   }
-  .temperature-value span {
+  .container .weather-container {
+    text-align: center;
+  }
+  .container .weather-container .temperature-value span {
     color: #d30606;
   }
-  .temperature-value p {
-    border-radius: 2px;
+  .container .weather-container .temperature-value p {
+    border-radius: 50%;
     width: 50%;
-    background: #c0f8f8;
-    margin: 0;
+    background: #527c7c;
+    margin: 0 auto;
+  }
+  .container .weather-container .location p {
+    border-radius: 30%;
+    width: 50%;
+    background: #64f148;
+    margin: 0 auto;
+    background: -webkit-gradient(linear, right top, left top, from(#64f148), color-stop(50%, pink));
+    background: linear-gradient(to left, #64f148, pink 50%);
   }
 }
