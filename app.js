@@ -67,7 +67,7 @@ function getWeather(latitude, longitude) {
 }
 
 function displayWeather() {
-    iconElement.innerHTML = `<img src="icons/${weather.iconId}.png"/>`;
+    iconElement.innerHTML = `<span class="material-symbols-outlined">nest_farsight_weather</span>`;
     tempElement.innerHTML = `${weather.temperature.value}<sup>o</sup><span>C</span>`;
     descElement.innerHTML = weather.description;
     locationElement.innerHTML = `${weather.city}, ${weather.country}`;
