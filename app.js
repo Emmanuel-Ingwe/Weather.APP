@@ -43,7 +43,8 @@ function setPosition(position) {
 
 function showError(error) {
     notificationElement.style.display = 'block';
-    notificationElement.innerHTML = `<p> ${error.message}`;
+    notificationElement.innerHTML = `<p> ${error.message}</p>`;
+    notificationElement.style.color = "red";
 }
 
 function getWeather(latitude, longitude) {
@@ -72,8 +73,8 @@ function displayWeather() {
     locationElement.innerHTML = `${weather.city}, ${weather.country}`;
 }
 
-const latitudee = position.coords.latitude;
-const longitudee = position.coords.longitude;
+// const latitudee = position.coords.latitude;
+// const longitudee = position.coords.longitude;
 
 function initMap() {
 
